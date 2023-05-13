@@ -1,0 +1,139 @@
+# SQL
+SQL Portfolio
+
+--Create a Beach Coverup store database--
+
+CREATE TABLE Beach_Coverup_Shop (id INTEGER PRIMARY KEY, name TEXT, color TEXT, quantity INTEGER, price_$ INTEGER, COO TEXT); 
+
+INSERT INTO Beach_Coverup_Shop VALUES (1, "StarFish", "LightBlues", 20, 85.00, "Turkey");
+INSERT INTO Beach_Coverup_Shop VALUES (2, "Stars", "Gold", 20, 85.00, "Italy");
+INSERT INTO Beach_Coverup_Shop VALUES (3, "Waves", "BlueSilver", 10, 90.00, "China");
+INSERT INTO Beach_Coverup_Shop VALUES (4, "Dolphins", "LightBlues", 10, 85.00, "Turkey");
+INSERT INTO Beach_Coverup_Shop VALUES (5, "Flowers", "Pinks", 20, 85.00, "Italy");
+INSERT INTO Beach_Coverup_Shop VALUES (6, "Tulips", "Multi", 10, 85.00, "China");
+INSERT INTO Beach_Coverup_Shop VALUES (7, "Kisses", "Reds", 20, 90.00, "Turkey");
+INSERT INTO Beach_Coverup_Shop VALUES (8, "LadyBugs", "MultiReds", 10, 85.00, "China");
+INSERT INTO Beach_Coverup_Shop VALUES (9, "Birds", "MultiBlues", 30, 95.00, "China");
+INSERT INTO Beach_Coverup_Shop VALUES (10, "Lines", "Multi", 10, 85.00, "Italy");
+INSERT INTO Beach_Coverup_Shop VALUES (11, "Rainbows", "Multi", 20, 95.00, "Turkey");
+INSERT INTO Beach_Coverup_Shop VALUES (12, "Smiles", "MultiYellows", 15, 85.00, "China");
+INSERT INTO Beach_Coverup_Shop VALUES (13, "Friuts", "Multi", 20, 95.00, "China");
+INSERT INTO Beach_Coverup_Shop VALUES (14, "Flags", "Multi", 20, 85.00, "Brazil");
+INSERT INTO Beach_Coverup_Shop VALUES (15, "Bikes", "Multi", 10, 75.00, "China");
+INSERT INTO Beach_Coverup_Shop VALUES (16, "Cats", "Multi", 10, 85.00, "China");
+
+--display the database Country of Origin for all items.  
+SELECT COO FROM Beach_Coverup_Shop;
+
+-- display all items available in the database. 
+SELECT * FROM Beach_Coverup_Shop;
+
+-- display sum of items
+SELECT SUM (quantity) FROM Beach_Coverup_Shop;
+
+-- display max of items
+SELECT MAX (quantity) FROM Beach_Coverup_Shop;
+
+-- display order by price
+SELECT * FROM Beach_Coverup_Shop ORDER BY price_$;
+
+-- display price greater than or equal to $90.00
+SELECT * FROM Beach_Coverup_Shop WHERE price_$ >= 90.00;
+
+-- display price less than or equal to $75.00
+SELECT * FROM Beach_Coverup_Shop WHERE price_$ <= 75.00;
+
+-- display all items listed at $85.00
+SELECT * FROM Beach_Coverup_Shop WHERE price_$ = 85.00;
+
+DATABASE SCHEMA
+Beach_Coverup_Shop16 rows
+id (PK)INTEGER
+nameTEXT
+colorTEXT
+quantityINTEGER
+price_$INTEGER
+COOTEXT
+
+QUERY RESULTS
+COO
+Turkey
+Italy
+China
+Turkey
+Italy
+China
+Turkey
+China
+China
+Italy
+Turkey
+China
+China
+Brazil
+China
+China
+
+id	name	color	quantity	price_$	COO
+1	StarFish	LightBlues	20	85	Turkey
+2	Stars	Gold	20	85	Italy
+3	Waves	BlueSilver	10	90	China
+4	Dolphins	LightBlues	10	85	Turkey
+5	Flowers	Pinks	20	85	Italy
+6	Tulips	Multi	10	85	China
+7	Kisses	Reds	20	90	Turkey
+8	LadyBugs	MultiReds	10	85	China
+9	Birds	MultiBlues	30	95	China
+10	Lines	Multi	10	85	Italy
+11	Rainbows	Multi	20	95	Turkey
+12	Smiles	MultiYellows	15	85	China
+13	Friuts	Multi	20	95	China
+14	Flags	Multi	20	85	Brazil
+15	Bikes	Multi	10	75	China
+16	Cats	Multi	10	85	China
+
+SUM (quantity)
+255
+
+MAX (quantity)
+30
+
+id	name	color	quantity	price_$	COO
+15	Bikes	Multi	10	75	China
+1	StarFish	LightBlues	20	85	Turkey
+2	Stars	Gold	20	85	Italy
+4	Dolphins	LightBlues	10	85	Turkey
+5	Flowers	Pinks	20	85	Italy
+6	Tulips	Multi	10	85	China
+8	LadyBugs	MultiReds	10	85	China
+10	Lines	Multi	10	85	Italy
+12	Smiles	MultiYellows	15	85	China
+14	Flags	Multi	20	85	Brazil
+16	Cats	Multi	10	85	China
+3	Waves	BlueSilver	10	90	China
+7	Kisses	Reds	20	90	Turkey
+9	Birds	MultiBlues	30	95	China
+11	Rainbows	Multi	20	95	Turkey
+13	Friuts	Multi	20	95	China
+id	name	color	quantity	price_$	COO
+3	Waves	BlueSilver	10	90	China
+7	Kisses	Reds	20	90	Turkey
+9	Birds	MultiBlues	30	95	China
+11	Rainbows	Multi	20	95	Turkey
+13	Friuts	Multi	20	95	China
+
+id	name	color	quantity	price_$	COO
+15	Bikes	Multi	10	75	China
+
+id	name	color	quantity	price_$	COO
+1	StarFish	LightBlues	20	85	Turkey
+2	Stars	Gold	20	85	Italy
+4	Dolphins	LightBlues	10	85	Turkey
+5	Flowers	Pinks	20	85	Italy
+6	Tulips	Multi	10	85	China
+8	LadyBugs	MultiReds	10	85	China
+10	Lines	Multi	10	85	Italy
+12	Smiles	MultiYellows	15	85	China
+14	Flags	Multi	20	85	Brazil
+16	Cats	Multi	10	85	China
+
